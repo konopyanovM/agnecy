@@ -1,0 +1,433 @@
+// * Imports *
+
+@import "_header-burger.scss";
+
+// * Connected fonts *
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
+
+// * Variables *
+
+$container-size: 1250px;
+
+$md1: 600px;
+$md2: 768px; // Tablets and mobile
+$md3: 992px;
+$md4: 1200px;
+
+$headerColor: #313030;
+
+// * Default font *
+
+body {
+   font-family: "Open Sans", sans-serif;
+   @media (max-width: $md1) {
+      background-color: #1d1d1d;
+   }
+
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      background-color: #524747;
+   }
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      background-color: #838383;
+   }
+
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      background-color: #e0e0e0;
+   }
+}
+
+// * Container *
+
+.container {
+   width: 100%;
+   max-width: $container-size;
+   margin: 0px auto;
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      max-width: $container-size * 0.6;
+   }
+
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      max-width: $container-size * 0.8;
+   }
+}
+
+// * Common styles
+
+.section {
+}
+.button {
+   width: 223px;
+   height: 51px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 34.06px;
+   letter-spacing: 0.32px;
+   text-decoration: none;
+   border: #ff2d2d solid 2px;
+   border-radius: 5px;
+   color: #ffffff;
+   background-color: #ff2d2d;
+   transition: all 0.1s ease;
+   &:hover {
+      border: #d42525 solid 2px;
+      background-color: #d42525;
+   }
+   &:active {
+      border: #6e1515 solid 2px;
+      background-color: #6e1515;
+   }
+   &-white {
+      color: #ff2d2d;
+      background-color: rgba($color: #000000, $alpha: 0);
+   }
+   &-white:hover {
+      color: #fff;
+      background-color: #d42525;
+   }
+   &-white:active {
+      color: #fff;
+      border: #6e1515 solid 2px;
+      background-color: #6e1515;
+   }
+}
+
+.title {
+   opacity: 0.8;
+   color: #000000;
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 55px;
+   text-transform: uppercase;
+   letter-spacing: 0.42px;
+}
+
+// * -----------------------------------Code-----------------------------------------
+
+.section-present {
+   background-color: #f6f2f2;
+}
+
+.wrapper {
+   padding-top: 30px;
+   @media (max-width: $md1) {
+      padding-top: 0px;
+   }
+
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding-top: 0px;
+   }
+}
+
+.header {
+   height: 80px;
+
+   position: relative;
+   z-index: 1;
+   background-color: $headerColor;
+   @media (max-width: $md1) {
+      height: 50px;
+   }
+
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      height: 60px;
+   }
+}
+.header__container {
+   max-width: 460px;
+   height: 100%;
+   margin: 0 auto;
+   position: relative;
+   background-color: $headerColor;
+   @media (max-width: $md1) {
+      max-width: none;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      max-width: none;
+   }
+}
+.header-menu {
+   height: 100%;
+   transition: all 0.3s ease;
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      height: 100vh;
+      position: relative;
+      z-index: -1;
+      background-color: rgba($color: $headerColor, $alpha: 0);
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      height: 100vh;
+      position: relative;
+      z-index: -1;
+      background-color: rgba($color: $headerColor, $alpha: 0);
+   }
+   &.active {
+      // ------------------ mobile -------------------
+      @media (max-width: $md1) {
+         background-color: rgba($color: $headerColor, $alpha: 0.7);
+      }
+
+      @media (min-width: $md1) and (max-width: $md2) {
+         background-color: rgba($color: $headerColor, $alpha: 0.7);
+      }
+   }
+}
+.header-list {
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   transition: all 0.3s ease;
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: -180px;
+      flex-direction: column;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: -180px;
+      flex-direction: column;
+   }
+   &.active {
+      // ------------------ mobile -------------------
+      @media (max-width: $md1) {
+         top: 50px;
+      }
+
+      @media (min-width: $md1) and (max-width: $md2) {
+         top: 60px;
+      }
+   }
+}
+.header-list__item {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-grow: 1;
+   &.active {
+      background-color: #ff3f40;
+   }
+
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      height: 50px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      height: 60px;
+   }
+}
+.header-list__link {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   list-style: none;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 24px;
+   text-transform: uppercase;
+   color: #e0e0e0;
+   transition: all 0.1s ease;
+   &:hover {
+      background-color: #ff6464;
+   }
+   &:active {
+      background-color: rgb(209, 45, 45);
+   }
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+   }
+}
+
+#header-burger {
+   margin-left: 20px;
+}
+
+// * -------------------------------Section-1-Present-------------------------------
+
+.present {
+   padding: 103px 0px 111px 0px;
+   display: flex;
+
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      padding: 25px 0px 50px 0px;
+      flex-direction: column;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding: 30px 0px 60px 0px;
+      flex-direction: column;
+   }
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      padding: 40px 0px 70px 0px;
+      flex-direction: column;
+   }
+}
+.present__text-block {
+   flex-basis: 60%;
+   margin: 0px 10px;
+   @media (max-width: $md1) {
+      margin: 0px 10px 30px;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin: 0px 10px 30px;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      margin-bottom: 40px;
+   }
+   @media (min-width: $md3) and (max-width: $md4) {
+      margin-left: 15px;
+   }
+}
+.present__title {
+   margin-bottom: 36px;
+   font-size: 60px;
+   font-weight: 800;
+   line-height: 72px;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   color: #000000;
+
+   @media (max-width: $md1) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 24px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 42px;
+      line-height: 48px;
+      margin-bottom: 24px;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      font-size: 48px;
+      line-height: 48px;
+      margin-bottom: 24px;
+   }
+}
+.present__text {
+   max-width: 85%;
+   margin-bottom: 58px;
+   font-size: 16px;
+   line-height: 28px;
+   opacity: 0.7;
+   color: #000000;
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      margin-bottom: 36px;
+   }
+}
+
+.present__video-block {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
+   background-color: #000000;
+   flex-basis: 40%;
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      min-height: 256px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      min-height: 384px;
+   }
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      min-height: 512px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   > iframe {
+      width: 100%;
+      flex-basis: 100%;
+      flex-grow: 1;
+   }
+}
+
+// * -------------------------------Section-2-Provide-------------------------------
+
+// * -------------------------------Section-3-Features-------------------------------
+
+.section {
+}
+.section-feature {
+}
+.container {
+}
+.feature {
+}
+.feature__header {
+}
+.feature__title {
+}
+.feature__text {
+}
+.feature__body {
+}
+.feature-products-list {
+}
+.feature-products-list__item {
+}
+.feature-products-images {
+}
+.feature-products-images__item {
+}
+// * ========================== BREAKPOINTS ============================ *
+
+// ------------------ mobile -------------------
+@media (max-width: $md1) {
+}
+
+@media (min-width: $md1) and (max-width: $md2) {
+}
+// ---------------------------------------------
+
+// tablets
+@media (min-width: $md2) and (max-width: $md3) {
+   #header-burger {
+      display: none;
+   }
+}
+
+// laptops, pc
+@media (min-width: $md3) and (max-width: $md4) {
+   #header-burger {
+      display: none;
+   }
+}
+
+@media (min-width: $md4) {
+   #header-burger {
+      display: none;
+   }
+}

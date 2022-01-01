@@ -1,0 +1,74 @@
+$burgerWidth: 30px;
+$burgerHeight: $burgerWidth * 0.75;
+$burgerSize: $burgerWidth * 0.1;
+$burgerColor: white;
+$burgerRadius: $burgerHeight * 0.3;
+$burgerTransition: all 0.2s ease;
+
+#header-burger {
+   width: $burgerWidth;
+   height: $burgerHeight;
+   position: absolute;
+   z-index: 1;
+   top: calc(50% - #{$burgerHeight} * 0.5);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   &::before {
+      content: "";
+      width: 100%;
+      height: $burgerSize;
+      position: relative;
+      top: 0;
+      border-radius: $burgerRadius;
+      background-color: $burgerColor;
+      transition: $burgerTransition;
+   }
+   > span {
+      width: 100%;
+      height: $burgerSize;
+      position: relative;
+      border-radius: $burgerRadius;
+      background-color: $burgerColor;
+      transition: $burgerTransition;
+   }
+   &::after {
+      content: "";
+      width: 100%;
+      height: $burgerSize;
+      position: relative;
+      top: 0;
+      border-radius: $burgerRadius;
+      background-color: $burgerColor;
+      transition: $burgerTransition;
+   }
+}
+#header-burger.active {
+   // animation
+   &::before {
+      top: 42%;
+      transform: rotate(45deg);
+   }
+   > span {
+      transform: scale(0);
+   }
+   &::after {
+      top: -42%;
+      transform: rotate(-45deg);
+   }
+}
+
+// * HTML ...
+
+//   <div id="header-burger">
+//      <span></span>
+//   </div>
+
+// * JS code ...
+
+// const $headerBurger = document.getElementById('header-burger')
+
+// $headerBurger.addEventListener('click', () => {
+//    $headerBurger.classList.toggle('active')
+// })

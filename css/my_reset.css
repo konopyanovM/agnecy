@@ -1,0 +1,25 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0px;
+   padding: 0px;
+   font-weight: 400;
+}
+div,
+ul,
+p {
+   margin: 0px;
+   padding: 0px;
+}
+
+/* add to template */
+
+/* remove list style */
+
+ul,
+ol {
+   list-style: none;
+}
