@@ -1,0 +1,108 @@
+.section-present {
+   background-color: #f6f2f2;
+}
+
+.present {
+   padding: 103px 0px 111px 0px;
+   display: flex;
+
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      padding: 25px 0px 50px 0px;
+      flex-direction: column;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding: 30px 0px 60px 0px;
+      flex-direction: column;
+   }
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      padding: 40px 0px 70px 0px;
+      flex-direction: column;
+   }
+}
+.present__text-block {
+   flex-basis: 60%;
+   margin: 0px 10px;
+   @media (max-width: $md1) {
+      margin: 0px 10px 30px;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin: 0px 10px 30px;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      margin-bottom: 40px;
+   }
+   @media (min-width: $md3) and (max-width: $md4) {
+      margin-left: 15px;
+   }
+}
+.present__title {
+   margin-bottom: 36px;
+   font-size: 60px;
+   font-weight: 800;
+   line-height: 72px;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   color: #000000;
+
+   @media (max-width: $md1) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 24px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 42px;
+      line-height: 48px;
+      margin-bottom: 24px;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      font-size: 48px;
+      line-height: 48px;
+      margin-bottom: 24px;
+   }
+}
+.present__text {
+   max-width: 85%;
+   margin-bottom: 58px;
+   font-size: 16px;
+   line-height: 28px;
+   opacity: 0.7;
+   color: #000000;
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      margin-bottom: 36px;
+   }
+}
+
+.present__video-block {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
+   background-color: #000000;
+   flex-basis: 40%;
+   // ------------------ mobile -------------------
+   @media (max-width: $md1) {
+      min-height: 256px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      min-height: 384px;
+   }
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      min-height: 512px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   > iframe {
+      width: 100%;
+      flex-basis: 100%;
+      flex-grow: 1;
+   }
+}
