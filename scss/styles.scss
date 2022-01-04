@@ -142,77 +142,8 @@ body {
 
 // * -------------------------------Section-3-Features-------------------------------
 
-.section-feature {
-   background-color: #fff;
-}
+@import "_feature.scss";
 
-.feature {
-   padding: 106px 0px 138px 0px;
-   display: flex;
-   flex-direction: column;
-}
-.feature__header {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   &::after {
-      content: "";
-      width: 132px;
-      height: 3px;
-      display: block;
-      background-color: #ff2d2d;
-   }
-}
-.feature__title {
-   margin-bottom: 26px;
-}
-.feature__text {
-   max-width: 500px;
-   margin-bottom: 29px;
-   font-size: 16px;
-   line-height: 28px;
-   text-align: center;
-   opacity: 0.7;
-}
-.feature__body {
-   padding-top: 88px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.feature-products-list {
-   min-width: 900px;
-   display: flex;
-   justify-content: space-between;
-}
-.feature-products-list__item {
-   font-size: 22px;
-   font-weight: 600;
-   line-height: 24px;
-   text-transform: uppercase;
-   opacity: 0.7;
-   cursor: pointer;
-   &.active {
-      color: #ff2d2d;
-   }
-}
-.feature-products-images-list {
-   margin-top: 66px;
-   display: none;
-   grid-template-columns: repeat(4, 1fr);
-   grid-gap: 20px;
-   &:nth-child(even) > li {
-      background-color: #706e65;
-   }
-   &.active {
-      display: grid;
-   }
-}
-.feature-products-images-list__item {
-   width: 299px;
-   height: 291px;
-   background-color: #f5f0dd;
-}
 // * ========================== BREAKPOINTS ============================ *
 
 // ------------------ mobile -------------------
@@ -241,4 +172,23 @@ body {
    #header-burger {
       display: none;
    }
+}
+
+// ------------------ mobile -------------------
+@media (max-width: $md1) {
+}
+
+@media (min-width: $md1) and (max-width: $md2) {
+}
+// ---------------------------------------------
+
+// tablets
+@media (min-width: $md2) and (max-width: $md3) {
+}
+
+// laptops, pc
+@media (min-width: $md3) and (max-width: $md4) {
+}
+
+@media (min-width: $md4) {
 }
