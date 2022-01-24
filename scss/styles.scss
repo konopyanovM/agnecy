@@ -124,6 +124,34 @@ body {
    }
 }
 
+.input {
+   padding: 0px;
+   padding-left: 36px;
+   border: 0px;
+   border-radius: 6px;
+
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 34.06px;
+   text-align: left;
+   color: #585858;
+   &-button {
+      padding-left: 0px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      background-color: #ff2d2d;
+   }
+   &-button:hover {
+      background-color: #d42525;
+   }
+   &-button:active {
+      background-color: #6e1515;
+   }
+   &:focus {
+      outline: 3px solid rgba($color: #8a3200, $alpha: 0.1);
+   }
+}
 // * -----------------------------------Code-----------------------------------------
 
 @import "_header.scss";
@@ -143,6 +171,14 @@ body {
 // * -------------------------------Section-3-Features-------------------------------
 
 @import "_feature.scss";
+
+// * -------------------------------Section-4-Team-------------------------------
+
+@import "_team.scss";
+
+// * -------------------------------Section-5-Subs-------------------------------
+
+@import "_subs.scss";
 
 // * ========================== BREAKPOINTS ============================ *
 

@@ -1,0 +1,89 @@
+.section-subs {
+   background-color: #f5f0dd;
+}
+.subs {
+}
+.subs__body {
+   padding: 140px 0px;
+   @media (max-width: $md1) {
+      padding: 80px 0px;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding: 100px 0px;
+   }
+}
+.subs__title {
+   margin-bottom: 31px;
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 24px;
+   text-align: center;
+   opacity: 0.8;
+   color: #000000;
+
+   @media (max-width: $md1) {
+      font-size: 30px;
+      line-height: 40px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      line-height: 50px;
+   }
+   // ---------------------------------------------
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      line-height: 50px;
+   }
+
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      font-size: 34px;
+   }
+}
+.subs__text {
+   margin-bottom: 62px;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 28px;
+   text-align: center;
+   opacity: 0.8;
+   color: #000000;
+   @media (min-width: $md2) and (max-width: $md3) {
+      font-size: 20px;
+   }
+}
+.subs-form {
+   max-width: 757px;
+   margin: 0px auto;
+   display: flex;
+   justify-content: space-between;
+   @media (max-width: $md1) {
+      justify-content: space-around;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      justify-content: space-around;
+   }
+}
+.subs-form__input {
+   min-height: 79px;
+   box-sizing: border-box;
+   flex-basis: 35%;
+   &:first-child {
+      flex-basis: 60%;
+   }
+   @media (max-width: $md1) {
+      padding-left: 15px;
+      min-height: 50px;
+      font-size: 14px;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      min-height: 70px;
+   }
+}
+
+.input-button {
+   @media (max-width: $md1) {
+      padding-left: 0px;
+   }
+}
