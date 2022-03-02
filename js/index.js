@@ -12,10 +12,14 @@ window.onload = () => {
    const $teamBody = document.querySelector('.team__body')
    const $teamList = document.querySelector('.team-list')
 
+   const $body = document.querySelector('.body')
+
    $headerBurger.addEventListener('click', () => {
       $headerBurger.classList.toggle('active');
       $headerList.classList.toggle('active');
       $headerMenu.classList.toggle('active');
+      $body.classList.toggle('active')
+
    })
 
    $featureProductsList.addEventListener('click', (event) => {

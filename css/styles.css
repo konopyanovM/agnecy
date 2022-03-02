@@ -72,6 +72,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 @media (max-width: 600px) {
   body {
     background-color: #1d1d1d;

@@ -21,6 +21,11 @@ $headerColor: #313030;
 
 body {
    font-family: "Open Sans", sans-serif;
+
+   &.active {
+      overflow: hidden;
+   }
+
    @media (max-width: $md1) {
       background-color: #1d1d1d;
    }
